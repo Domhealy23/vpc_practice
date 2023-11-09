@@ -118,6 +118,9 @@ resource "aws_instance" "ec2_sub1A" {
     subnet_id = aws_subnet.subnet1A.id
     instance_type = "t2.micro"
         #key_name = "${var.ami_key_pair_name}"
+    tags = {
+      Name = "ec2_sub1A"
+    }
 } 
 
 resource "aws_instance" "ec2_sub1B" {
@@ -126,6 +129,9 @@ resource "aws_instance" "ec2_sub1B" {
     subnet_id = aws_subnet.subnet1B.id
     instance_type = "t2.micro"
     #key_name = "${var.ami_key_pair_name}"
+    tags = {
+      Name = "ec2_sub1B"
+    }
 } 
 
 resource "aws_instance" "ec2_sub1C" {
@@ -134,6 +140,9 @@ resource "aws_instance" "ec2_sub1C" {
     subnet_id = aws_subnet.subnet1C.id
     instance_type = "t2.micro"
     #key_name = "${var.ami_key_pair_name}"
+    tags = {
+      Name = "ec2_sub1C"
+    }
 } 
 # output "ami" {
 #   value = data.aws_ami.linux
