@@ -154,9 +154,9 @@ resource "aws_launch_template" "ecs_lt" {
 
 #  key_name               = "ec2ecsglog"
  vpc_security_group_ids = [aws_security_group.My_VPC_Security_Group.id]
-/*  iam_instance_profile {
-   name = "ecsInstanceRole"
- } */
+ iam_instance_profile {
+   name = "AWSServiceRoleForECS"
+ }
 
  block_device_mappings {
    device_name = "/dev/xvda"
